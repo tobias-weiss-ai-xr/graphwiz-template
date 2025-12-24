@@ -1,0 +1,17 @@
+{
+  "project_name": "My GraphWiz Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_short_description": "A Python project powered by knowledge graphs and AI agents",
+  "version": "0.1.0",
+  "author_name": "GraphWiz",
+  "author_email": "info@graphwiz.ai",
+  "github_username": "tobias-weiss-ai-xr",
+  "license": ["MIT", "Apache-2.0", "GPL-3.0-only", "BSD-3-Clause"],
+  "python_version": ["3.10", "3.11", "3.12"],
+  "include_neo4j": ["yes", "no"],
+  "include_ai_agents": ["yes", "no"],
+  "include_trading": ["yes", "no"],
+  "include_docker": ["yes", "no"],
+  "include_ci": ["yes", "no"],
+  "open_source_license": true
+}

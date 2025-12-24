@@ -1,0 +1,39 @@
+# {{ cookiecutter.project_name }} Configuration
+# Copy this file to config.yaml and update with your settings
+
+{% if cookiecutter.include_neo4j == "yes" %}
+# Neo4j Knowledge Graph Configuration
+neo4j:
+  uri: "bolt://localhost:7687"
+  username: "neo4j"
+  password: "your_neo4j_password"
+  database: "neo4j"
+{% endif %}
+
+{% if cookiecutter.include_trading == "yes" %}
+# Exchange Configuration
+exchanges:
+  binance:
+    enabled: false  # Set to true to enable
+    api_key: "your_binance_api_key"
+    api_secret: "your_binance_api_secret"
+    sandbox: true  # Set to false for production
+    test_mode: true  # Set to false for live trading
+{% endif %}
+
+{% if cookiecutter.include_ai_agents == "yes" %}
+# AI Agent Configuration
+agents:
+  # Add your agents here
+  example_agent:
+    enabled: false
+    model: "gpt-4"
+    temperature: 0.3
+{% endif %}
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/{{ cookiecutter.project_slug }}.log"
+  rotation: "100 MB"
+  retention: "30 days"
