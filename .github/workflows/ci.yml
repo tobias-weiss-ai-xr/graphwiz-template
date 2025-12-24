@@ -104,7 +104,7 @@ jobs:
         bandit -r {{cookiecutter.project_slug}}/ -f json -o bandit-report.json || true
 
     - name: Upload Bandit Results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v6
       with:
         name: bandit-results
         path: bandit-report.json
